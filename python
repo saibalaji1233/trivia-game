@@ -15,14 +15,14 @@ questions = {
 def play_trivia():
     score=0
     total_questions=5
-    # convert questions into list
+# convert questions into list
     question_list=list(questions.keys())
-    # randomly choose 5 questions
+# randomly choose 5 questions
     random_questions=random.sample(question_list,total_questions)
     for i,q in enumerate(random_questions,1):
         print(f"\nQuestion{i}:{q}")
         answer=input("Your answer:").strip().lower()
-        # check answer
+# check answer
         if answer==questions[q].lower():
             print("Correct answer! ✅")
             score+=1
@@ -32,4 +32,5 @@ def play_trivia():
     print(f"Your Score:{score}/{total_questions}")
 # start the game
 play_trivia()
+
 
